@@ -137,6 +137,7 @@
           </button>
         </div>
         <img alt="" class="md:mx-auto md:h-96 md:w-96" id="fullImg" />
+        <p class="text-center font-bold" id="numberImage"></p>
       </div>
     </section>
   </main>
