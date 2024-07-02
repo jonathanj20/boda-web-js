@@ -1,3 +1,7 @@
+<?php
+include 'connection_bd.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,17 +45,35 @@
     </nav>
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7">
       <div class="space-y-4 mb-5">
-        <label for="namePerson" class="block text-center font-mono uppercase">Ingrese su primer nombre y apellido</label>
-        <div class="space-y-3 sm:flex sm:justify-center sm:items-center sm:space-y-0">
-          <input type="text" placeholder="Ingrese su nombre" class="outline-none block mx-auto sm:mx-2" id="namePerson" />
-          <button class="block mx-auto border-2 border-gray-500 rounded px-2 py-1 sm:mx-2" id="invitationsBtn">Aceptar</button>
-        </div>
+        <form action="" method="post">
+          <label for="namePerson" class="block text-center font-mono uppercase">Ingrese su primer nombre y apellido</label>
+          <div class="space-y-3 sm:flex sm:justify-center sm:items-center sm:space-y-0">
+            <input type="text" placeholder="Ingrese su nombre" class="outline-none block mx-auto sm:mx-2" id="namePerson" name="guestName" />
+            <button class="block mx-auto border-2 border-gray-500 rounded px-2 py-1 sm:mx-2" id="invitationsBtn" name="btnAceptar">Aceptar</button>
+          </div>
+        </form>
       </div>
       <div class="border-4 border-yellow-500 bg-white w-8/12 mx-auto space-y-4 p-3 text-center font-mono">
         <h2 class="uppercase -tracking-tight">invitación para</h2>
-        <p id="username" class="text-2xl">Nombre</p>
-        <p class="uppercase">Adultos - <span id="adults">0</span></p>
-        <p class="hidden uppercase" id="paragraphChildren">Niños - <span id="kid">0</span></p>
+        <?php
+        if (isset($_POST['btnAceptar'])) {
+          $nameGuest = $_POST['guestName'];
+          $result = mysqli_query($connection, "SELECT * FROM guests WHERE nameGuest='$nameGuest'");
+          $existsUser = false;
+
+          while ($fila = mysqli_fetch_array($result)) {
+            echo '<p class="text-2xl">' . $fila[1] . '</p>' .
+              '<p class="uppercase">Niños - ' . $fila[2] . '</p>' .
+              ' <p class="uppercase">Número de mesa - ' . $fila[3] . '</p>';
+
+            $existsUser = true;
+          }
+
+          if (!$existsUser) {
+            echo 'No existe el invitado';
+          }
+        }
+        ?>
       </div>
     </section>
     <section>
