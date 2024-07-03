@@ -12,7 +12,7 @@ include 'connection_bd.php'
   <link rel="stylesheet" href="./output.css">
 </head>
 
-<body class="transition-opacityt">
+<body class="transition-opacity">
   <header class="p-2 flex justify-between items-center md:flex-row-reverse md:w-8/12 md:mx-auto">
     <button class="border-2 p-1 border-black md:hidden" id="btnOpen">
       <svg class="h-8 w-8" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -46,7 +46,7 @@ include 'connection_bd.php'
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7">
       <div class="space-y-4 mb-5">
         <form action="" method="post">
-          <label for="namePerson" class="block text-center font-mono uppercase">Ingrese su primer nombre y apellido</label>
+          <label for="namePerson" class="block text-center font-mono uppercase">Ingrese su nombre completo</label>
           <div class="space-y-3 sm:flex sm:justify-center sm:items-center sm:space-y-0">
             <input type="text" placeholder="Ingrese su nombre" class="outline-none block mx-auto sm:mx-2" id="namePerson" name="guestName" />
             <button class="block mx-auto border-2 border-gray-500 rounded px-2 py-1 sm:mx-2" id="invitationsBtn" name="btnAceptar">Aceptar</button>
@@ -57,10 +57,16 @@ include 'connection_bd.php'
         <h2 class="uppercase -tracking-tight">invitación para</h2>
         <?php
         if (isset($_POST['btnAceptar'])) {
-          $nameGuest = $_POST['guestName'];
+          $nameGuest = strtolower($_POST['guestName']);
+
+          /*mysqli_query ejecuta una consulta en la base de datos.
+          Aquí se está ejecutando un select y si encuentra el resultado se guarda la fila en la variable
+          result*/
           $result = mysqli_query($connection, "SELECT * FROM guests WHERE nameGuest='$nameGuest'");
           $existsUser = false;
 
+          /**la función mysqli_fetch_array
+           * Recupera una fila de resultados como un array asociativo, un array numérico  */
           while ($fila = mysqli_fetch_array($result)) {
             echo '<p class="text-2xl">' . $fila[1] . '</p>' .
               '<p class="uppercase">Niños - ' . $fila[2] . '</p>' .
@@ -70,7 +76,7 @@ include 'connection_bd.php'
           }
 
           if (!$existsUser) {
-            echo 'No existe el invitado';
+            echo 'No existe el invitado o el nombre fue escrito incorrectamente';
           }
         }
         ?>
@@ -158,8 +164,32 @@ include 'connection_bd.php'
             </svg>
           </button>
         </div>
-        <img alt="" class="md:mx-auto md:h-96 md:w-96" id="fullImg" />
+        <img class="md:mx-auto md:h-96 md:w-96" id="fullImg" />
         <p class="text-center font-bold" id="numberImage"></p>
+      </div>
+    </section>
+    <section class="text-center">
+      <h2 class="text-white">Ubicaciones y horarios</h2>
+      <img src="../images/separator2.png" alt="separador" class="mx-auto relative bottom-14">
+      <div class="space-y-16 md:grid md:grid-cols-2 md:space-y-0 my-auto">
+        <div class="border-4 p-5 border-purple-500 bg-white w-10/12 mx-auto md:w-2/6">
+          <p class="mb-5">Ceremonia religisa</p>
+          <img src="../images/church.png" alt="Iglesia" class="mb-5 mx-auto w-10/12 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <p>Nombre de la iglesia</p>
+          <p>6:00 PM</p>
+          <img src="../images/separator2.png" alt="separador" class="mx-auto">
+          <p>Calle Ejemplo #33, colonia Ejemplo, Ciudad Ejemplo, Estado Ejemplo, CP: 00000</p>
+          <button class="border-2 border-purple-600 bg-purple-300 p-3 mt-3 text-white">Ver en GPS</button>
+        </div>
+        <div class="border-4 p-5 border-purple-500 bg-white w-10/12 mx-auto md:w-2/6">
+          <p class="mb-5">Recepción</p>
+          <img src="../images/church.png" alt="Iglesia" class="mb-5 mx-auto w-10/12 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <p>Nombre del lugar</p>
+          <p>6:00 PM</p>
+          <img src="../images/separator2.png" alt="separador" class="mx-auto">
+          <p>Calle Ejemplo #33, colonia Ejemplo, Ciudad Ejemplo, Estado Ejemplo, CP: 00000</p>
+          <button>Ver en GPS</button>
+        </div>
       </div>
     </section>
   </main>
