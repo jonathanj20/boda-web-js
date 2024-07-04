@@ -9,7 +9,7 @@ include 'connection_bd.php'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="../dist/styles.css">
 </head>
 
 <body class="transition-opacity">
@@ -171,9 +171,9 @@ include 'connection_bd.php'
     <section class="text-center">
       <h2 class="text-white">Ubicaciones y horarios</h2>
       <img src="../images/separator2.png" alt="separador" class="mx-auto relative bottom-14">
-      <div class="space-y-16 md:grid md:grid-cols-2 md:space-y-0 my-auto">
+      <div class="space-y-16 md:flex md:space-y-0 my-auto">
         <div class="border-4 p-5 border-purple-500 bg-white w-10/12 mx-auto md:w-2/6">
-          <p class="mb-5">Ceremonia religisa</p>
+          <p class="mb-5">Ceremonia religiosa</p>
           <img src="../images/church.png" alt="Iglesia" class="mb-5 mx-auto w-10/12 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
           <p>Nombre de la iglesia</p>
           <p>6:00 PM</p>
