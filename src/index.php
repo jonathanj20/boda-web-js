@@ -57,7 +57,7 @@ include 'connection_bd.php'
         <h2 class="uppercase -tracking-tight">invitación para</h2>
         <?php
         if (isset($_POST['btnAceptar'])) {
-          $nameGuest = strtolower($_POST['guestName']);
+          $nameGuest = $_POST['guestName'];
 
           /*mysqli_query ejecuta una consulta en la base de datos.
           Aquí se está ejecutando un select y si encuentra el resultado se guarda la fila en la variable
@@ -68,9 +68,14 @@ include 'connection_bd.php'
           /**la función mysqli_fetch_array
            * Recupera una fila de resultados como un array asociativo, un array numérico  */
           while ($fila = mysqli_fetch_array($result)) {
-            echo '<p class="text-2xl">' . $fila[1] . '</p>' .
-              '<p class="uppercase">Niños - ' . $fila[2] . '</p>' .
-              ' <p class="uppercase">Número de mesa - ' . $fila[3] . '</p>';
+            echo '<p class="text-2xl">' . $fila[1] . '</p>';
+            echo '<p class="uppercase">Adultos - ' . $fila[2] . '</p>';
+
+            if ($fila[3] > 0) {
+              echo ' <p class="uppercase">Niños - ' . $fila[3] . '</p>';
+            }
+
+            echo '<p class="uppercase">Número de mesa - ' . $fila[4] . '</p>';
 
             $existsUser = true;
           }
@@ -169,7 +174,7 @@ include 'connection_bd.php'
       </div>
     </section>
     <section class="text-center">
-      <h2 class="text-white">Ubicaciones y horarios</h2>
+      <h2>Ubicaciones y horarios</h2>
       <img src="../images/separator2.png" alt="separador" class="mx-auto relative bottom-14">
       <div class="space-y-16 md:flex md:space-y-0 my-auto">
         <div class="border-4 p-5 border-purple-500 bg-white w-10/12 mx-auto md:w-2/6">
@@ -188,7 +193,7 @@ include 'connection_bd.php'
           <p>6:00 PM</p>
           <img src="../images/separator2.png" alt="separador" class="mx-auto">
           <p>Calle Ejemplo #33, colonia Ejemplo, Ciudad Ejemplo, Estado Ejemplo, CP: 00000</p>
-          <button>Ver en GPS</button>
+          <button class="border-2 border-purple-600 bg-purple-300 p-3 mt-3 text-white">Ver en GPS</button>
         </div>
       </div>
     </section>
