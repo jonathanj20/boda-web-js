@@ -10,6 +10,7 @@ include 'connection_bd.php'
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../dist/styles.css">
+  <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,18 +30,18 @@ include 'connection_bd.php'
         <li><a href="#outfit" class="hover:text-violet-600 menu-link">Vestimenta</a></li>
         <li><a href="#gallery" class="hover:text-violet-600 menu-link">Galería</a></li>
         <li><a href="#location" class="hover:text-violet-600 menu-link">Ubicación</a></li>
-        <li><a href="#" class="hover:text-violet-600 menu-link">Contacto</a></li>
+        <li><a href="#contact" class="hover:text-violet-600 menu-link">Contacto</a></li>
       </ul>
     </nav>
     <img src="../images/logoboda.png" alt="logo" class="hover:rotate-12">
   </header>
-  <main class="">
+  <main>
     <nav class="bg-violet-300 py-5 w-screen relative top-0 left-0 hidden shadow-[0_h-full_0_0_rgba(0,0,0,0.5)]" id="nav">
       <ul class="space-y-6 flex flex-col text-center">
         <li><a href="#outfit" class="link-nav hover:text-white transition-all menu-link">Vestimenta</a></li>
         <li><a href="#gallery" class="link-nav hover:text-white transition-all menu-link">Galería</a></li>
         <li><a href="#location" class="link-nav hover:text-white transition-all menu-link">Ubicación</a></li>
-        <li><a href="#" class="link-nav hover:text-white transition-all menu-link">Contacto</a></li>
+        <li><a href="#contact" class="link-nav hover:text-white transition-all menu-link">Contacto</a></li>
       </ul>
     </nav>
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7">
@@ -163,7 +164,7 @@ include 'connection_bd.php'
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
             </svg>
           </button>
-          <button class="border- border-black hover:border-white hover:text-white" id="advanceButton">
+          <button class="border-2 border-black hover:border-white hover:text-white" id="advanceButton">
             <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>
@@ -197,6 +198,15 @@ include 'connection_bd.php'
         </div>
       </div>
     </section>
+    <section class="p-5 text-center" id="contact">
+      <h2>Confirmación de asistencia</h2>
+      <div class="border-4 border-purple-600 p-7 my-5 space-y-5 md:w-2/5 mx-auto">
+        <i class="fa-brands fa-whatsapp fa-bounce fa-5x mt-5" style="color: #8d11ca;"></i>
+        <p>Confirmar por WhatsApp</p>
+        <a href="https://wa.me/526121408800" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75">Con Mercedes</a>
+        <a href="https://wa.me/5216121316339" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75">Con Victor</a>
+      </div>
+    </section>
     <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 mx-auto" id="containerFullImg">
       <button class="border-2 border-black hover:border-white hover:text-white" id="btnCloseNormalImg">
         <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -206,6 +216,7 @@ include 'connection_bd.php'
       <img class="md:mx-auto md:h-96 md:w-96" id="fullNormalImg" />
     </div>
   </main>
+
   <script src="menu.js"></script>
   <script src="gallery.js"></script>
   <script src="photos.js"></script>
