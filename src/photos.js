@@ -14,4 +14,8 @@ btnCloseNormalImg.addEventListener("click", () => {
     container.classList.add('hidden');
 });
 
-
+document.addEventListener("keydown", (e) => {
+    if (e.key === 'Escape') {
+        container.classList.add('hidden');
+    }
+});
