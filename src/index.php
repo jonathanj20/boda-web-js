@@ -11,31 +11,34 @@ include 'connection_bd.php'
   <title>Document</title>
   <link rel="stylesheet" href="../dist/styles.css">
   <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
-  <header class="p-2 flex justify-between items-center md:flex-row-reverse md:w-8/12 md:mx-auto">
-    <button class="border-2 p-1 border-black md:hidden" id="btnOpen">
-      <svg class="h-8 w-8" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-      </svg>
-    </button>
-    <button id="btnClose" class="relative hidden border-2 border-black">
-      <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-    <nav class="hidden md:flex space-x-2">
-      <ul class="flex space-x-6">
-        <li><a href="#outfit" class="hover:text-violet-600 menu-link">Vestimenta</a></li>
-        <li><a href="#gallery" class="hover:text-violet-600 menu-link">Galería</a></li>
-        <li><a href="#location" class="hover:text-violet-600 menu-link">Ubicación</a></li>
-        <li><a href="#contact" class="hover:text-violet-600 menu-link">Contacto</a></li>
-      </ul>
-    </nav>
-    <img src="../images/logoboda.png" alt="logo" class="hover:rotate-12">
-  </header>
-  <main>
+  <header class="bg-white fixed w-full top-0 z-10">
+    <div class="p-2 flex justify-between items-center md:flex-row-reverse md:w-8/12 md:mx-auto">
+      <button class="border-2 p-1 border-black md:hidden" id="btnOpen">
+        <svg class="h-8 w-8" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+      <button id="btnClose" class="relative hidden border-2 border-black">
+        <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-2">
+        <ul class="flex space-x-6">
+          <li><a href="#outfit" class="hover:text-violet-600 menu-link">Vestimenta</a></li>
+          <li><a href="#gallery" class="hover:text-violet-600 menu-link">Galería</a></li>
+          <li><a href="#location" class="hover:text-violet-600 menu-link">Ubicación</a></li>
+          <li><a href="#contact" class="hover:text-violet-600 menu-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <img src="../images/logoboda.png" alt="logo" class="hover:rotate-12">
+    </div>
     <nav class="bg-violet-300 py-5 w-screen relative top-0 left-0 hidden shadow-[0_h-full_0_0_rgba(0,0,0,0.5)]" id="nav">
       <ul class="space-y-6 flex flex-col text-center">
         <li><a href="#outfit" class="link-nav hover:text-white transition-all menu-link">Vestimenta</a></li>
@@ -44,6 +47,8 @@ include 'connection_bd.php'
         <li><a href="#contact" class="link-nav hover:text-white transition-all menu-link">Contacto</a></li>
       </ul>
     </nav>
+  </header>
+  <main class="mt-16">
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7">
       <div class="space-y-4 mb-5">
         <form action="" method="post">
@@ -152,7 +157,7 @@ include 'connection_bd.php'
         <img src="../images/background1.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
         <img src="../images/background2.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
       </div>
-      <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 mx-auto" id="fullImageContainer">
+      <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-20 mx-auto" id="fullImageContainer">
         <button class="border-2 border-black hover:border-white hover:text-white" id="btnCloseFullImage">
           <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
@@ -170,7 +175,7 @@ include 'connection_bd.php'
             </svg>
           </button>
         </div>
-        <img class="md:mx-auto md:h-96 md:w-96" id="fullImg" />
+        <img class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" id="fullImg" />
         <p class="text-center font-bold" id="numberImage"></p>
       </div>
     </section>
@@ -178,13 +183,13 @@ include 'connection_bd.php'
       <h2 class="text-white font-bold">Ubicaciones y horarios</h2>
       <img src="../images/separator2.png" alt="separador" class="mx-auto relative bottom-14">
       <div class="space-y-16 md:flex md:space-y-0 my-auto md:items-center">
-        <div class="border-8 p-5 border-amber-200 bg-slate-50  w-10/12 mx-auto md:w-2/6 h-50">
+        <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6">
           <p class="mb-5">Ceremonia religiosa</p>
           <img src="../images/iglesia.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
           <p>Igleisa Betlehem</p>
           <p>6:00 PM</p>
           <img src="../images/separator2.png" alt="separador" class="mx-auto">
-          <p>Padre kino, 16 de Septiembre esq, Guerrero, 23020 La Paz, B.C.S.</p>
+          <p>Padre kino, 16 de Septiembre esq, Guerrero, 23020, La Paz, B.C.S.</p>
           <a class="block border-2 border-purple-600 bg-purple-300 p-3 mt-3 text-white" href="https://www.google.com/maps/dir/24.144887,-110.297585/iglesia+bethlehem+ubicacion+la+paz/@24.1467437,-110.3005277,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x86afd3ef2462056f:0x5c00fbf878a18bab!2m2!1d-110.2987049!2d24.1486938?entry=ttu" target="_blank">Ver en GPS</a>
         </div>
         <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6">
@@ -207,19 +212,19 @@ include 'connection_bd.php'
         <a href="https://wa.me/5216121316339" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75">Con Victor</a>
       </div>
     </section>
-    <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 mx-auto" id="containerFullImg">
+    <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-30 mx-auto" id="containerFullImg">
       <button class="border-2 border-black hover:border-white hover:text-white" id="btnCloseNormalImg">
         <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
         </svg>
       </button>
-      <img class="md:mx-auto md:h-96 md:w-96" id="fullNormalImg" />
+      <img class="mx-auto md:h-96 md:w-96" id="fullNormalImg" />
     </div>
-  </main>
 
-  <script src="menu.js"></script>
-  <script src="gallery.js"></script>
-  <script src="photos.js"></script>
+    <script type="module" src="swiper.js"></script>
+    <script src="menu.js"></script>
+    <script src="gallery.js"></script>
+    <script src="photos.js"></script>
 </body>
 
 </html>
