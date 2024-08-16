@@ -37,7 +37,7 @@ include 'connection_bd.php'
           <li><a href="#contact" class="hover:text-violet-600 menu-link">Contacto</a></li>
         </ul>
       </nav>
-      <img src="../images/logoboda.png" alt="logo" class="hover:rotate-12">
+      <a href="#"><img src="../images/logoboda.png" alt="logo" class="hover:rotate-12"></a>
     </div>
     <nav class="bg-violet-300 py-5 w-screen relative top-0 left-0 hidden shadow-[0_h-full_0_0_rgba(0,0,0,0.5)]" id="nav">
       <ul class="space-y-6 flex flex-col text-center">
@@ -52,7 +52,7 @@ include 'connection_bd.php'
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7">
       <div class="space-y-4 mb-5">
         <form action="" method="post">
-          <label for="namePerson" class="block text-center font-mono uppercase">Ingrese su nombre completo</label>
+          <label for="namePerson" class="block text-center font-mono uppercase">Ingrese nombre y apellido</label>
           <div class="space-y-3 sm:flex sm:justify-center sm:items-center sm:space-y-0">
             <input type="text" placeholder="Ingrese su nombre" class="outline-none block mx-auto sm:mx-2" id="namePerson" name="guestName" />
             <button class="block mx-auto border-2 border-gray-500 rounded px-2 py-1 sm:mx-2" id="invitationsBtn" name="btnAceptar">Aceptar</button>
@@ -81,7 +81,7 @@ include 'connection_bd.php'
               echo ' <p class="uppercase">Niños - ' . $fila[3] . '</p>';
             }
 
-            echo '<p class="uppercase">Número de mesa - ' . $fila[4] . '</p>';
+            echo '<div>Los pases son personales e intransferibles</div>';
 
             $existsUser = true;
           }
