@@ -12,8 +12,6 @@ include 'connection_bd.php'
   <link rel="stylesheet" href="../dist/styles.css">
   <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 </head>
 
 <body>
@@ -175,8 +173,35 @@ include 'connection_bd.php'
             </svg>
           </button>
         </div>
-        <img class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" id="fullImg" />
-        <p class="text-center font-bold" id="numberImage"></p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../images/fondo_8.jpg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/fondo_10.png" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/fondo_11.png" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/fondo2.jpeg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/fondo4.jpeg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/novios_prueba.png" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto">
+            </div>
+            <div class=" swiper-slide">
+              <img src="../images/background1.jpg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/background2.jpg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
+            </div>
+          </div>
+        </div>
+        <p class="text-center font-bold text-white" id="numberImage"></p>
       </div>
     </section>
     <section class="text-center bg-[url('../images/copasvino3.png')] bg-cover bg-no-repeat bg-center" id="location">
@@ -223,7 +248,7 @@ include 'connection_bd.php'
 
     <script type="module" src="swiper.js"></script>
     <script src="menu.js"></script>
-    <script src="gallery.js"></script>
+    <!-- <script src="gallery.js"></script> -->
     <script src="photos.js"></script>
 </body>
 

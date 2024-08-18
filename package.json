@@ -6,6 +6,7 @@
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
   },
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "swiper": "^11.0.7"
   }
 }
