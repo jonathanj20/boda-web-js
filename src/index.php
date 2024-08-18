@@ -92,7 +92,7 @@ include 'connection_bd.php'
       </div>
     </section>
     <section>
-      <audio src="../audio/musica_prueba_boda.mp3" controls class="w-full bg-fuchsia-400"></audio>
+      <audio src="../audio/si_tu_quieres.mp3" controls class="w-full bg-fuchsia-400"></audio>
     </section>
     <section class="p-7 w-10/12 mx-auto mt-5 border-8 border-amber-200 font-serif">
       <div>
@@ -105,7 +105,7 @@ include 'connection_bd.php'
       <div class="mt-5">
         <p class="text-center">Te esperámos el</p>
         <div class="text-center p-2 border-2 border-violet-500 mt-3 max-w-2xl mx-auto">
-          5 de abril del 2023
+          19 de octubre del 2024
         </div>
       </div>
     </section>
@@ -215,7 +215,7 @@ include 'connection_bd.php'
           <p>6:00 PM</p>
           <img src="../images/separator2.png" alt="separador" class="mx-auto">
           <p>Padre kino, 16 de Septiembre esq, Guerrero, 23020, La Paz, B.C.S.</p>
-          <a class="block border-2 border-purple-600 bg-purple-300 p-3 mt-3 text-white" href="https://www.google.com/maps/dir/24.144887,-110.297585/iglesia+bethlehem+ubicacion+la+paz/@24.1467437,-110.3005277,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x86afd3ef2462056f:0x5c00fbf878a18bab!2m2!1d-110.2987049!2d24.1486938?entry=ttu" target="_blank">Ver en GPS</a>
+          <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md" href="https://www.google.com/maps/dir/24.144887,-110.297585/iglesia+bethlehem+ubicacion+la+paz/@24.1467437,-110.3005277,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x86afd3ef2462056f:0x5c00fbf878a18bab!2m2!1d-110.2987049!2d24.1486938?entry=ttu" target="_blank">Ver en GPS</a>
         </div>
         <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6">
           <p class="mb-5">Recepción</p>
@@ -224,7 +224,7 @@ include 'connection_bd.php'
           <p>6:00 PM</p>
           <img src="../images/separator2.png" alt="separador" class="mx-auto">
           <p>Pichilingue 19, Los Tabachines, 23048 La Paz, B.C.S.</p>
-          <a class="block border-2 border-purple-600 bg-purple-300 p-3 mt-3 text-white" href="https://www.google.com/maps/dir//Pichilingue+19,+Los+Tabachines,+23048+La+Paz,+B.C.S./@24.0679118,-110.3860395,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x86afcd66e6c76e9f:0x38a840618f577975!2m2!1d-110.3036379!2d24.0679339?entry=ttu" target="_blank">Ver en GPS</a>
+          <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md" href="https://www.google.com/maps/dir//Pichilingue+19,+Los+Tabachines,+23048+La+Paz,+B.C.S./@24.0679118,-110.3860395,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x86afcd66e6c76e9f:0x38a840618f577975!2m2!1d-110.3036379!2d24.0679339?entry=ttu" target="_blank">Ver en GPS</a>
         </div>
       </div>
     </section>
