@@ -12,6 +12,7 @@ include 'connection_bd.php'
   <link rel="stylesheet" href="../dist/styles.css">
   <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -57,7 +58,7 @@ include 'connection_bd.php'
           </div>
         </form>
       </div>
-      <div class="border-8 border-double border-amber-200 bg-white w-7/12 mx-auto space-y-4 p-3 bg-[url('../images/marcopase2.jpg')] bg-cover bg-no-repeat text-center font-mono">
+      <div class="border-8 border-double border-amber-200 bg-white w-7/12 mx-auto space-y-4 p-3 bg-[url('../images/marcopase2.jpg')] bg-cover bg-no-repeat text-center font-mono" data-aos="zoom-in" data-aos-duration="2000">
         <h2 class="uppercase -tracking-tight">invitación para</h2>
         <?php
         if (isset($_POST['btnAceptar'])) {
@@ -99,12 +100,12 @@ include 'connection_bd.php'
         <p class="text-center text-lg">Boda de</p>
         <p class="text-center font-bold text-4xl">Mercedes & Victor</p>
       </div>
-      <div>
+      <div data-aos="zoom-in" data-aos-duration="2000">
         <img src="../images/novios_prueba.png" alt="novios" class="w-60 mx-auto mt-8 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
       </div>
       <div class="mt-5">
         <p class="text-center">Te esperámos el</p>
-        <div class="text-center p-2 border-2 border-violet-500 mt-3 max-w-2xl mx-auto">
+        <div class="text-center p-2 border-2 border-violet-500 mt-3 max-w-2xl mx-auto" data-aos="zoom-in-up" data-aos-duration="2000">
           19 de octubre del 2024
         </div>
       </div>
@@ -115,11 +116,11 @@ include 'connection_bd.php'
         <img src="../images/separator.png" alt="separator" class="mx-auto relative bottom-20">
       </div>
       <div class="flex flex-col gap-y-11 mx-auto text-center sm:flex-row sm:w-3/6 sm:justify-between">
-        <div>
+        <div data-aos="fade-down-right" data-aos-duration="2000">
           <p class="text-2xl">Antonia y Salvador</p>
           <p>Padres de la novia</p>
         </div>
-        <div>
+        <div data-aos="fade-down-left" data-aos-duration="2000">
           <p class="text-2xl">Sandra y Valentín</p>
           <p>Padres del novio</p>
         </div>
@@ -131,12 +132,12 @@ include 'connection_bd.php'
         <img src="../images/separator2.png" alt="separator" class="mx-auto relative bottom-14">
       </div>
       <div class="space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:w-3/6 sm:justify-between mx-auto">
-        <div>
-          <img src="../images/vestido.png" alt="vestido para mujer" class="mx-auto">
+        <div data-aos="zoom-in-right" data-aos-duration="2000">
+          <img src="../images/vestido.png" alt="vestido para mujer" class="mx-auto" div>
           <p>Para mujeres</p>
           <p>Vestido o traje formal</p>
         </div>
-        <div>
+        <div data-aos="zoom-in-left" data-aos-duration="2000">
           <img src="../images/traje.png" alt="traje para hombre" class="mx-auto">
           <p>Para hombres</p>
           <p>Traje formal o camisa</p>
@@ -146,14 +147,30 @@ include 'connection_bd.php'
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-5 mt-5" id="gallery">
       <h2 class="text-center my-5">Galería de fotos</h2>
       <div class="space-y-7 flex items-center flex-col bg-white py-10 md:space-y-0 md:grid md:place-items-center md:grid-cols-2 md:p-10 md:gap-5 lg:grid-cols-4">
-        <img src="../images/fondo_8.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
-        <img src="../images/fondo_10.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
-        <img src="../images/fondo_11.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
-        <img src="../images/fondo2.jpeg" alt="" class="w-9/12  md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
-        <img src="../images/fondo4.jpeg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
-        <img src="../images/novios_prueba.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
-        <img src="../images/background1.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
-        <img src="../images/background2.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img-gallery" />
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/fondo_8.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
+        </div>
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/fondo_10.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
+        </div>
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/fondo_11.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
+        </div>
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/fondo2.jpeg" alt="" class="w-9/12  md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
+        </div>
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/fondo4.jpeg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
+        </div>
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/novios_prueba.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
+        </div>
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/background1.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
+        </div>
+        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
+          <img src="../images/background2.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
+        </div>
       </div>
       <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-20 mx-auto" id="fullImageContainer">
         <button class="border-2 border-black hover:border-white hover:text-white" id="btnCloseFullImage">
@@ -208,7 +225,9 @@ include 'connection_bd.php'
       <h2 class="text-white font-bold">Ubicaciones y horarios</h2>
       <img src="../images/separator2.png" alt="separador" class="mx-auto relative bottom-14">
       <div class="space-y-16 md:flex md:space-y-0 my-auto md:items-center">
-        <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6">
+        <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
           <p class="mb-5">Ceremonia religiosa</p>
           <img src="../images/iglesia.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
           <p>Igleisa Betlehem</p>
@@ -217,7 +236,9 @@ include 'connection_bd.php'
           <p>Padre kino, 16 de Septiembre esq, Guerrero, 23020, La Paz, B.C.S.</p>
           <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md" href="https://www.google.com/maps/dir/24.144887,-110.297585/iglesia+bethlehem+ubicacion+la+paz/@24.1467437,-110.3005277,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x86afd3ef2462056f:0x5c00fbf878a18bab!2m2!1d-110.2987049!2d24.1486938?entry=ttu" target="_blank">Ver en GPS</a>
         </div>
-        <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6">
+        <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6" data-aos="flip-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
           <p class="mb-5">Recepción</p>
           <img src="../images/sotres2.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
           <p>Salón Sotres</p>
@@ -230,7 +251,7 @@ include 'connection_bd.php'
     </section>
     <section class="p-5 text-center" id="contact">
       <h2>Confirmación de asistencia</h2>
-      <div class="border-4 border-purple-600 p-7 my-5 space-y-5 md:w-2/5 mx-auto">
+      <div class="border-4 border-purple-600 p-7 my-5 space-y-5 md:w-2/5 mx-auto" data-aos="flip-up" data-aos-duration="2000">
         <i class="fa-brands fa-whatsapp fa-bounce fa-5x mt-5" style="color: #8d11ca;"></i>
         <p>Confirmar por WhatsApp</p>
         <a href="https://wa.me/526121408800" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75">Con Mercedes</a>
@@ -248,8 +269,11 @@ include 'connection_bd.php'
 
     <script type="module" src="swiper.js"></script>
     <script src="menu.js"></script>
-    <!-- <script src="gallery.js"></script> -->
     <script src="photos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
