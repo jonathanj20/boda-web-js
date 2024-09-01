@@ -70,6 +70,7 @@ include 'connection_bd.php'
           $result = mysqli_query($connection, "SELECT * FROM guests WHERE nameGuest='$nameGuest'");
           $existsUser = false;
 
+
           /**la función mysqli_fetch_array
            * Recupera una fila de resultados como un array asociativo, un array numérico  */
           while ($fila = mysqli_fetch_array($result)) {
@@ -112,8 +113,11 @@ include 'connection_bd.php'
     </section>
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7 mt-5">
       <div class="h-20 mb-10">
-        <h2 class="text-center text-xl">Nuestros padres</h2>
-        <img src="../images/separator.png" alt="separator" class="mx-auto relative bottom-20">
+        <div class="flex justify-center items-center">
+          <i class="fa-solid fa-children text-3xl"></i>
+          <h2 class="text-center text-xl ms-3">Nuestros padres</h2>
+        </div>
+        <img src="../images/separator.png" alt="separator" class="mx-auto relative bottom-16">
       </div>
       <div class="flex flex-col gap-y-11 mx-auto text-center sm:flex-row sm:w-3/6 sm:justify-between">
         <div data-aos="fade-down-right" data-aos-duration="2000">
@@ -128,7 +132,10 @@ include 'connection_bd.php'
     </section>
     <section class="p-7 w-10/12 bg-white mx-auto mt-5 border-8 border-amber-200 font-serif text-center" id="outfit">
       <div class="h-14 mb-5 sm:mb-15">
-        <h2>Código de vestimenta</h2>
+        <div>
+          <i class="fa-solid fa-champagne-glasses text-3xl"></i>
+          <h2>Código de vestimenta</h2>
+        </div>
         <img src="../images/separator2.png" alt="separator" class="mx-auto relative bottom-14">
       </div>
       <div class="space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:w-3/6 sm:justify-between mx-auto">
@@ -145,8 +152,14 @@ include 'connection_bd.php'
       </div>
     </section>
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-5 mt-5" id="gallery">
-      <h2 class="text-center my-5">Galería de fotos</h2>
-      <div class="space-y-7 flex items-center flex-col bg-white py-10 md:space-y-0 md:grid md:place-items-center md:grid-cols-2 md:p-10 md:gap-5 lg:grid-cols-4">
+      <div class="flex justify-center items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 h-10 w-10 inline-block">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+        </svg>
+        <h2 class="ms-3">Galería de fotos</h2>
+      </div>
+      <div class="space-y-7 flex items-center flex-col bg-white py-10 md:space-y-0 md:grid md:place-items-center md:grid-cols-2 md:p-10 md:gap-5 lg:grid-cols-4 mt-5">
         <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
           <img src="../images/fondo_8.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
         </div>
@@ -222,24 +235,33 @@ include 'connection_bd.php'
       </div>
     </section>
     <section class="text-center bg-[url('../images/copasvino3.png')] bg-cover bg-no-repeat bg-center" id="location">
-      <h2 class="text-white font-bold">Ubicaciones y horarios</h2>
+      <div class="flex justify-center">
+        <i class="fa-solid fa-location-dot text-white text-3xl"></i>
+        <h2 class="text-white font-bold ms-3">Ubicaciones y horarios</h2>
+      </div>
       <img src="../images/separator2.png" alt="separador" class="mx-auto relative bottom-14">
-      <div class="space-y-16 md:flex md:space-y-0 my-auto md:items-center">
+      <div class="space-y-16 md:flex md:space-y-0 md:items-center">
         <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6" data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000">
-          <p class="mb-5">Ceremonia religiosa</p>
+          <div class="flex justify-center items-center mb-5">
+            <i class="fa-solid fa-church text-xl hover:text-purple-500 cursor-pointer"></i>
+            <p class="ms-3">Ceremonia religiosa</p>
+          </div>
           <img src="../images/iglesia.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
           <p>Igleisa Betlehem</p>
           <p>6:00 PM</p>
           <img src="../images/separator2.png" alt="separador" class="mx-auto">
-          <p>Padre kino, 16 de Septiembre esq, Guerrero, 23020, La Paz, B.C.S.</p>
+          <p>Padre kino, 16 de Septiembre, Guerrero, 23020, La Paz, B.C.S.</p>
           <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md" href="https://www.google.com/maps/dir/24.144887,-110.297585/iglesia+bethlehem+ubicacion+la+paz/@24.1467437,-110.3005277,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x86afd3ef2462056f:0x5c00fbf878a18bab!2m2!1d-110.2987049!2d24.1486938?entry=ttu" target="_blank">Ver en GPS</a>
         </div>
         <div class="border-8 p-5 border-amber-200 bg-slate-50 w-10/12 mx-auto md:w-2/6" data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000">
-          <p class="mb-5">Recepción</p>
+          <div class="flex justify-center mb-5">
+            <i class="fa-solid fa-map-pin text-xl hover:text-purple-500 cursor-pointer"></i>
+            <p class="ms-3">Recepción</p>
+          </div>
           <img src="../images/sotres2.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
           <p>Salón Sotres</p>
           <p>6:00 PM</p>
@@ -250,7 +272,10 @@ include 'connection_bd.php'
       </div>
     </section>
     <section class="p-5 text-center" id="contact">
-      <h2>Confirmación de asistencia</h2>
+      <div class="flex justify-center">
+        <i class="fa-regular fa-calendar-check text-2xl hover:text-purple-500 cursor-pointer"></i>
+        <h2 class="ms-3">Confirmación de asistencia</h2>
+      </div>
       <div class="border-4 border-purple-600 p-7 my-5 space-y-5 md:w-2/5 mx-auto" data-aos="flip-up" data-aos-duration="2000">
         <i class="fa-brands fa-whatsapp fa-bounce fa-5x mt-5" style="color: #8d11ca;"></i>
         <p>Confirmar por WhatsApp</p>
