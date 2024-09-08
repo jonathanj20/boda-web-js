@@ -160,30 +160,24 @@ include 'connection_bd.php'
         <h2 class="ms-3">Galería de fotos</h2>
       </div>
       <div class="space-y-7 flex items-center flex-col bg-white py-10 md:space-y-0 md:grid md:place-items-center md:grid-cols-2 md:p-10 md:gap-5 lg:grid-cols-4 mt-5">
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/fondo_8.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
-        </div>
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/fondo_10.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
-        </div>
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/fondo_11.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
-        </div>
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/fondo2.jpeg" alt="" class="w-9/12  md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-left" data-aos-duration="2000" />
-        </div>
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/fondo4.jpeg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
-        </div>
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/novios_prueba.png" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
-        </div>
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/background1.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
-        </div>
-        <div class="transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer">
-          <img src="../images/background2.jpg" alt="" class="w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery" data-aos="flip-right" data-aos-duration="2000" />
-        </div>
+        <?php
+        $srcs = array(
+          "../images/fondo_8.jpg",
+          "../images/fondo_10.png",
+          "../images/fondo_11.png",
+          "../images/fondo2.jpeg",
+          "../images/fondo4.jpeg",
+          "../images/novios_prueba.png",
+          "../images/background1.jpg",
+          "../images/background2.jpg"
+        );
+
+        foreach ($srcs as $src) {
+          echo "<div class='transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer'>
+                  <img src=$src class='w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery' data-aos='flip-left' data-aos-duration='2000' />
+                </div>";
+        }
+        ?>
       </div>
       <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-20 mx-auto" id="fullImageContainer">
         <button class="border-2 border-black hover:border-white hover:text-white" id="btnCloseFullImage">
@@ -205,30 +199,24 @@ include 'connection_bd.php'
         </div>
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="../images/fondo_8.jpg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/fondo_10.png" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/fondo_11.png" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/fondo2.jpeg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/fondo4.jpeg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/novios_prueba.png" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto">
-            </div>
-            <div class=" swiper-slide">
-              <img src="../images/background1.jpg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/background2.jpg" alt="" class="w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto" />
-            </div>
+            <?php
+            $srcSlides = array(
+              "../images/fondo_8.jpg",
+              "../images/fondo_10.png",
+              "../images/fondo_11.png",
+              "../images/fondo2.jpeg",
+              "../images/fondo4.jpeg",
+              "../images/novios_prueba.png",
+              "../images/background1.jpg",
+              "../images/background2.jpg"
+            );
+
+            foreach ($srcSlides as $src) {
+              echo "<div class='swiper-slide'>
+                      <img src=$src class='w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto' />
+                    </div>";
+            }
+            ?>
           </div>
         </div>
         <p class="text-center font-bold text-white" id="numberImage"></p>
