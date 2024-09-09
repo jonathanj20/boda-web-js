@@ -38,13 +38,15 @@ include 'connection_bd.php'
       </nav>
       <a href="#"><img src="../images/logoboda.png" alt="logo" class="hover:rotate-12"></a>
     </div>
-    <nav class="bg-violet-300 py-5 w-screen relative top-0 left-0 hidden shadow-[0_h-full_0_0_rgba(0,0,0,0.5)]" id="nav">
-      <ul class="space-y-6 flex flex-col text-center">
-        <li><a href="#outfit" class="link-nav hover:text-white transition-all menu-link">Vestimenta</a></li>
-        <li><a href="#gallery" class="link-nav hover:text-white transition-all menu-link">Galería</a></li>
-        <li><a href="#location" class="link-nav hover:text-white transition-all menu-link">Ubicación</a></li>
-        <li><a href="#contact" class="link-nav hover:text-white transition-all menu-link">Contacto</a></li>
-      </ul>
+    <nav class="bg-violet-300 w-screen relative top-0 left-0 h-0 shadow-[0_h-full_0_0_rgba(0,0,0,0.5)] transition-all delay-100 ease-in-out overflow-hidden" id="nav">
+      <div class="hidden" id="listContainer">
+        <ul class="space-y-6 flex flex-col text-center py-5">
+          <li><a href="#outfit" class="link-nav hover:text-white transition-all menu-link">Vestimenta</a></li>
+          <li><a href="#gallery" class="link-nav hover:text-white transition-all menu-link">Galería</a></li>
+          <li><a href="#location" class="link-nav hover:text-white transition-all menu-link">Ubicación</a></li>
+          <li><a href="#contact" class="link-nav hover:text-white transition-all menu-link">Contacto</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="mt-16">
