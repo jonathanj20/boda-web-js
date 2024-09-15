@@ -13,6 +13,7 @@ include 'connection_bd.php'
   <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="fuentes.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@ include 'connection_bd.php'
         </svg>
       </button>
       <nav class="hidden md:flex space-x-2">
-        <ul class="flex space-x-6">
+        <ul class="flex space-x-6 font-montserrat uppercase">
           <li><a href="#outfit" class="hover:text-violet-600 menu-link">Vestimenta</a></li>
           <li><a href="#gallery" class="hover:text-violet-600 menu-link">Galería</a></li>
           <li><a href="#location" class="hover:text-violet-600 menu-link">Ubicación</a></li>
@@ -38,9 +39,9 @@ include 'connection_bd.php'
       </nav>
       <a href="#"><img src="../images/logoboda.png" alt="logo" class="hover:rotate-12"></a>
     </div>
-    <nav class="bg-violet-300 w-screen relative top-0 left-0 h-0 shadow-[0_h-full_0_0_rgba(0,0,0,0.5)] transition-all delay-100 ease-in-out overflow-hidden" id="nav">
+    <nav class="bg-fuchsia-200 w-screen relative top-0 left-0 h-0 shadow-[0_h-full_0_0_rgba(0,0,0,0.5)] transition-all delay-100 ease-in-out overflow-hidden" id="nav">
       <div class="hidden" id="listContainer">
-        <ul class="space-y-6 flex flex-col text-center py-5">
+        <ul class="space-y-6 flex flex-col text-center py-5 font-montserrat uppercase">
           <li><a href="#outfit" class="link-nav hover:text-white transition-all menu-link">Vestimenta</a></li>
           <li><a href="#gallery" class="link-nav hover:text-white transition-all menu-link">Galería</a></li>
           <li><a href="#location" class="link-nav hover:text-white transition-all menu-link">Ubicación</a></li>
@@ -53,14 +54,14 @@ include 'connection_bd.php'
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7">
       <div class="space-y-4 mb-5">
         <form action="" method="post">
-          <label for="namePerson" class="block text-center font-mono uppercase">Ingrese nombre y apellido</label>
+          <label for="namePerson" class="block text-center font-monserrat uppercase">Ingrese nombre y apellido</label>
           <div class="space-y-3 sm:flex sm:justify-center sm:items-center sm:space-y-0">
             <input type="text" placeholder="Ingrese su nombre" class="outline-none block mx-auto sm:mx-2" id="namePerson" name="guestName" />
             <button class="block mx-auto border-2 border-gray-500 rounded px-2 py-1 sm:mx-2" id="invitationsBtn" name="btnAceptar">Aceptar</button>
           </div>
         </form>
       </div>
-      <div class="border-8 border-double border-amber-200 bg-white w-7/12 mx-auto space-y-4 p-3 bg-[url('../images/marcopase2.jpg')] bg-cover bg-no-repeat text-center font-mono" data-aos="zoom-in" data-aos-duration="2000">
+      <div class="border-8 border-double border-amber-200 bg-white w-7/12 mx-auto space-y-4 p-3 bg-[url('../images/marcopase2.jpg')] bg-cover bg-no-repeat text-center font-monserrat" data-aos="zoom-in" data-aos-duration="2000">
         <h2 class="uppercase -tracking-tight">invitación para</h2>
         <?php
         if (isset($_POST['btnAceptar'])) {
@@ -76,14 +77,18 @@ include 'connection_bd.php'
           /**la función mysqli_fetch_array
            * Recupera una fila de resultados como un array asociativo, un array numérico  */
           while ($fila = mysqli_fetch_array($result)) {
-            echo '<p class="text-2xl">' . $fila[1] . '</p>';
-            echo '<p class="uppercase">Adultos - ' . $fila[2] . '</p>';
+            echo '<p class="text-4xl font-allura">' . $fila[1] . '</p>';
+
 
             if ($fila[3] > 0) {
+              echo '<p class="uppercase">Adultos - ' . $fila[2] . '</p>';
               echo ' <p class="uppercase">Niños - ' . $fila[3] . '</p>';
+            } else {
+              echo '<p class="uppercase">Adultos</p>';
+              echo '<p class="text-2xl">' . $fila[2] . '</p>';
             }
 
-            echo '<div>Los pases son personales e intransferibles</div>';
+            echo '<div class="text-justify text-xs md:text-sm md:text-center font-montserrat">Los pases son personales e intransferibles con verificación en recepción.</div>';
 
             $existsUser = true;
           }
@@ -98,37 +103,36 @@ include 'connection_bd.php'
     <section>
       <audio src="../audio/si_tu_quieres.mp3" controls class="w-full bg-fuchsia-400"></audio>
     </section>
-    <section class="p-7 w-10/12 mx-auto mt-5 border-8 border-amber-200 font-serif">
+    <section class="p-3 w-3/4 mx-auto mt-5 border-8 border-amber-200 font-serif">
       <div>
-        <p class="text-center text-lg">Boda de</p>
-        <p class="text-center font-bold text-4xl">Mercedes & Victor</p>
+        <p class="text-center font-bold text-4xl md:text-6xl font-alexbrush">Mercedes & Victor</p>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000">
-        <img src="../images/novios_prueba.png" alt="novios" class="w-60 mx-auto mt-8 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
+        <img src="../images/novios_prueba.png" alt="novios" class="w-60 md:w-80 mx-auto mt-5 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
       </div>
       <div class="mt-5">
-        <p class="text-center">Te esperámos el</p>
-        <div class="text-center p-2 border-2 border-violet-500 mt-3 max-w-2xl mx-auto" data-aos="zoom-in-up" data-aos-duration="2000">
-          19 de octubre del 2024
+        <p class="text-center font-montserrat uppercase">Tenemos el honor de invitarlos a nuestra boda</p>
+        <div class="text-center p-2 border-2 border-violet-500 mt-3 max-w-2xl mx-auto uppercase font-montserrat text-xl md:text-2xl" data-aos="zoom-in-up" data-aos-duration="2000">
+          19 | octubre | 2024
         </div>
       </div>
     </section>
-    <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7 mt-5">
-      <div class="h-20 mb-10">
-        <div class="flex justify-center items-center">
-          <i class="fa-solid fa-children text-3xl"></i>
-          <h2 class="text-center text-xl ms-3">Nuestros padres</h2>
+    <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7 mt-5 font-montserrat">
+      <div class="h-16">
+        <div class="flex justify-center items-center uppercase">
+          <h2 class="text-center text-base md:text-xl ms-3">En compañía de nuestros padres</h2>
         </div>
-        <img src="../images/separator.png" alt="separator" class="mx-auto relative bottom-16">
       </div>
-      <div class="flex flex-col gap-y-11 mx-auto text-center sm:flex-row sm:w-3/6 sm:justify-between">
+      <div class="flex flex-col gap-y-11 mx-auto text-center sm:flex-row sm:w-3/6 sm:justify-between font-montserrat">
         <div data-aos="fade-down-right" data-aos-duration="2000">
-          <p class="text-2xl">Antonia y Salvador</p>
-          <p>Padres de la novia</p>
+          <p class="uppercase">Padres de la novia</p>
+          <p class="text-base mt-3">Antonia Domínguez</p>
+          <p class="text-base">Salvador Posada</p>
         </div>
         <div data-aos="fade-down-left" data-aos-duration="2000">
-          <p class="text-2xl">Sandra y Valentín</p>
-          <p>Padres del novio</p>
+          <p class="uppercase">Padres del novio</p>
+          <p class="text-base mt-3">Sandra Sicairos</p>
+          <p class="text-base">Valentín Moreno <i class="fa-solid fa-cross"></i></p>
         </div>
       </div>
     </section>
