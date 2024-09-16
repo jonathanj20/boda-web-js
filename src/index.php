@@ -17,7 +17,7 @@ include 'connection_bd.php'
 </head>
 
 <body>
-  <main class="mt-16">
+  <main class="mt-16 overflow-hidden">
     <header class="bg-white fixed w-full top-0 z-10">
       <div class="p-2 flex justify-between items-center md:flex-row-reverse md:w-8/12 md:mx-auto">
         <button class="border-2 p-1 border-black md:hidden" id="btnOpen">
@@ -73,12 +73,10 @@ include 'connection_bd.php'
           $result = mysqli_query($connection, "SELECT * FROM guests WHERE nameGuest='$nameGuest'");
           $existsUser = false;
 
-
           /**la función mysqli_fetch_array
            * Recupera una fila de resultados como un array asociativo, un array numérico  */
           while ($fila = mysqli_fetch_array($result)) {
             echo '<p class="text-4xl font-allura">' . $fila[1] . '</p>';
-
 
             if ($fila[3] > 0) {
               echo '<p class="uppercase">Adultos - ' . $fila[2] . '</p>';
@@ -144,7 +142,7 @@ include 'connection_bd.php'
           <p class="text-center text-xl">Formal</p>
         </div>
       </div>
-      <div class="space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:w-3/6 sm:justify-between mx-auto font-bonodi text-xl">
+      <div class="space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:w-3/6 sm:justify-between mx-auto font-bonodi text-xl mt-8">
         <div data-aos="zoom-in-right" data-aos-duration="2000">
           <img src="../images/vestido.png" alt="vestido para mujer" class="mx-auto" div>
           <p class="uppercase text-lg">Mujeres</p>
@@ -282,7 +280,7 @@ include 'connection_bd.php'
     </section>
     <section class="p-5 mt-5">
       <h2 class="uppercase text-center text-xl font-montserrat">solo adultos</h2>
-      <div class="w-96 mx-auto mt-2">
+      <div class="w-96 md:w-[40rem] mx-auto mt-2">
         <p class="font-montserrat text-justify mt-2">Aunque amamos a sus pequeños, este es un evento sólo para adultos y jóvenes mayores de 15 años. Esperamos contar con su presencia y a los niños les deseamos dulces sueños en casita.</p>
       </div>
     </section>
