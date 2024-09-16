@@ -8,7 +8,9 @@ module.exports = {
         "allura": ["Allura", "cursive"],
         "montserrat": ["Montserrat", "sans-serif"],
         "nunito": ["Nunito", "sans-serif"],
-        "sofadi": ["Sofadi One", "system-ui"]
+        "sofadi": ["Sofadi One", "system-ui"],
+        "rubik": ["Rubik Mono One", "monospace"],
+        "bonodi": ["Bodoni Moda", "serif"]
       }
     },
   },
