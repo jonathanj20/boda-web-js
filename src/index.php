@@ -17,51 +17,51 @@ include 'connection_bd.php'
 </head>
 
 <body>
-  <main class="mt-16 overflow-hidden">
-    <header class="bg-white fixed w-full top-0 z-10">
-      <div class="p-2 flex justify-between items-center md:flex-row-reverse md:w-8/12 md:mx-auto">
-        <button class="border-2 p-1 border-black md:hidden" id="btnOpen">
-          <svg class="h-8 w-8" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-          </svg>
-        </button>
-        <button id="btnClose" class="relative hidden border-2 border-black">
-          <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-        <nav class="hidden md:flex space-x-2">
-          <ul class="flex space-x-6 font-montserrat uppercase">
-            <li><a href="#outfit" class="hover:text-violet-600 menu-link">Vestimenta</a></li>
-            <li><a href="#gallery" class="hover:text-violet-600 menu-link">Galería</a></li>
-            <li><a href="#location" class="hover:text-violet-600 menu-link">Ubicación</a></li>
-            <li><a href="#contact" class="hover:text-violet-600 menu-link">Contacto</a></li>
-          </ul>
-        </nav>
-        <a href="#"><img src="../images/logoboda.png" alt="logo" class="hover:rotate-12"></a>
-      </div>
-      <nav class="bg-fuchsia-200 w-full relative top-0 left-0 h-0 shadow-[0_h-full_0_0_rgba(0,0,0,0.5)] transition-all delay-100 ease-in-out overflow-hidden" id="nav">
-        <div class="hidden" id="listContainer">
-          <ul class="space-y-6 flex flex-col text-center py-5 font-montserrat uppercase">
-            <li><a href="#outfit" class="link-nav hover:text-white transition-all menu-link">Vestimenta</a></li>
-            <li><a href="#gallery" class="link-nav hover:text-white transition-all menu-link">Galería</a></li>
-            <li><a href="#location" class="link-nav hover:text-white transition-all menu-link">Ubicación</a></li>
-            <li><a href="#contact" class="link-nav hover:text-white transition-all menu-link">Contacto</a></li>
-          </ul>
-        </div>
+  <header class="bg-white fixed w-full top-0 z-10">
+    <div class="p-2 flex justify-between items-center md:flex-row-reverse md:w-8/12 md:mx-auto">
+      <button class="border-2 p-1 border-black md:hidden" id="btnOpen">
+        <svg class="h-8 w-8" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+      <button id="btnClose" class="relative hidden border-2 border-black">
+        <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-2">
+        <ul class="flex space-x-6 font-montserrat uppercase">
+          <li><a href="#outfit" class="hover:text-violet-600 menu-link">Vestimenta</a></li>
+          <li><a href="#gallery" class="hover:text-violet-600 menu-link">Galería</a></li>
+          <li><a href="#location" class="hover:text-violet-600 menu-link">Ubicación</a></li>
+          <li><a href="#contact" class="hover:text-violet-600 menu-link">Contacto</a></li>
+        </ul>
       </nav>
-    </header>
+      <a href="#"><img src="../images/logoboda.png" alt="logo" class="hover:rotate-12 menu-link"></a>
+    </div>
+    <nav class="bg-fuchsia-200 w-full relative top-0 left-0 h-0 shadow-[0_h-full_0_0_rgba(0,0,0,0.5)] transition-all delay-100 ease-in-out overflow-hidden" id="nav">
+      <div class="hidden" id="listContainer">
+        <ul class="space-y-6 flex flex-col text-center py-5 font-montserrat uppercase">
+          <li><a href="#outfit" class="link-nav hover:text-white transition-all menu-link">Vestimenta</a></li>
+          <li><a href="#gallery" class="link-nav hover:text-white transition-all menu-link">Galería</a></li>
+          <li><a href="#location" class="link-nav hover:text-white transition-all menu-link">Ubicación</a></li>
+          <li><a href="#contact" class="link-nav hover:text-white transition-all menu-link">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="mt-16 overflow-hidden">
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7">
       <div class="space-y-4 mb-5">
         <form action="" method="post">
-          <label for="namePerson" class="block text-center font-monserrat uppercase">Ingrese nombre y apellido</label>
+          <label for="namePerson" class="block text-center font-monserrat uppercase">Ingrese su nombre y apellido</label>
           <div class="space-y-3 sm:flex sm:justify-center sm:items-center sm:space-y-0">
-            <input type="text" placeholder="Ingrese su nombre" class="outline-none block mx-auto sm:mx-2" id="namePerson" name="guestName" />
+            <input type="text" placeholder="Ejemplo: Diego González" class="outline-none block mx-auto sm:mx-2" id="namePerson" name="guestName" />
             <button class="block mx-auto border-2 border-gray-500 rounded px-2 py-1 sm:mx-2" id="invitationsBtn" name="btnAceptar">Aceptar</button>
           </div>
         </form>
       </div>
-      <div class="border-8 border-double border-amber-200 bg-white w-7/12 mx-auto space-y-4 p-3 bg-[url('../images/marcopase2.jpg')] bg-cover bg-no-repeat text-center font-monserrat" data-aos="zoom-in" data-aos-duration="2000">
+      <div class="border-8 border-double border-amber-200 bg-white w-2/3 mx-auto space-y-4 p-3 bg-[url('../images/marcopase2.jpg')] bg-cover bg-no-repeat text-center font-monserrat" data-aos="zoom-in" data-aos-duration="2000">
         <h2 class="uppercase -tracking-tight">invitación para</h2>
         <?php
         if (isset($_POST['btnAceptar'])) {
@@ -103,10 +103,15 @@ include 'connection_bd.php'
     </section>
     <section class="p-3 w-3/4 mx-auto mt-5 border-8 border-amber-200 font-serif">
       <div>
-        <p class="text-center font-bold text-4xl md:text-6xl font-alexbrush">Mercedes & Victor</p>
+        <p class="text-center font-allura text-6xl my-3 font-bold">¡Nos casamos!</p>
+        <p class="font-montserrat mx-auto w-3/4 md:w-2/4 text-justify">Damos gracias a Dios por el gran privilegio de encontrarnos. Hoy, con el profundo amor que sentimos, hemos decidido unir nuestras vidas en matrimonio.</p>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000">
         <img src="../images/novios_prueba.png" alt="novios" class="w-60 md:w-80 mx-auto mt-5 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
+      </div>
+      <div class="mt-5">
+        <p class="uppercase text-center text-base my-4">Los novios</p>
+        <p class="mt-2 text-center font-bold text-4xl md:text-6xl font-alexbrush">Mercedes & Victor</p>
       </div>
       <div class="mt-5">
         <p class="text-center font-montserrat uppercase">Tenemos el honor de invitarlos a nuestra boda</p>
@@ -134,6 +139,9 @@ include 'connection_bd.php'
         </div>
       </div>
     </section>
+    <section>
+      <p class="uppercase font-montserrat text-center mt-2 text-violet-500 font-bold">Tú cuidaras de mí, yo de tí y Dios de nosotros.</p>
+    </section>
     <section class="p-7 w-10/12 bg-white mx-auto mt-5 border-8 border-amber-200 font-serif text-center" id="outfit">
       <div class="h-14 mb-10 sm:mb-15">
         <div>
@@ -142,7 +150,7 @@ include 'connection_bd.php'
           <p class="text-center text-xl">Formal</p>
         </div>
       </div>
-      <div class="space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:w-3/6 sm:justify-between mx-auto font-bonodi text-xl mt-8">
+      <div class="space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:w-3/6 sm:justify-between mx-auto font-bonodi text-xl mt-14">
         <div data-aos="zoom-in-right" data-aos-duration="2000">
           <img src="../images/vestido.png" alt="vestido para mujer" class="mx-auto" div>
           <p class="uppercase text-lg">Mujeres</p>
@@ -283,6 +291,10 @@ include 'connection_bd.php'
       <div class="w-96 md:w-[40rem] mx-auto mt-2">
         <p class="font-montserrat text-justify mt-2">Aunque amamos a sus pequeños, este es un evento sólo para adultos y jóvenes mayores de 15 años. Esperamos contar con su presencia y a los niños les deseamos dulces sueños en casita.</p>
       </div>
+    </section>
+    <section>
+      <p class="font-montserrat uppercase text-center font-bold">El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en todas circunstancias.</p>
+      <p class="text-center uppercase font-bold">1 Corintios 13:7</p>
     </section>
     <section class="p-5 text-center mt-5" id="contact">
       <div class="flex justify-center">
