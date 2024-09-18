@@ -9,11 +9,11 @@ include 'connection_bd.php'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../dist/styles.css">
+  <link rel="stylesheet" href="/dist/styles.css">
   <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="fuentes.css">
+  <link rel="stylesheet" href="/src/fuentes.css">
 </head>
 
 <body>
@@ -317,9 +317,9 @@ include 'connection_bd.php'
       <img class="mx-auto md:h-96 md:w-96" id="fullNormalImg" />
     </div>
 
-    <script type="module" src="swiper.js"></script>
-    <script src="menu.js"></script>
-    <script src="photos.js"></script>
+    <script type="module" src="/src/swiper.js"></script>
+    <script src="/src/menu.js"></script>
+    <script src="/src/photos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
