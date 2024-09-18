@@ -3,8 +3,7 @@
     "tailwindcss": "^3.4.4"
   },
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
-    "start": "npm run start"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
   },
   "dependencies": {
     "aos": "^2.3.4",
