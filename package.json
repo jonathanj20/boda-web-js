@@ -4,7 +4,7 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
-    "start": "npm run start"
+    "start": "npm run dev"
   },
   "dependencies": {
     "aos": "^2.3.4",
