@@ -4,7 +4,7 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
-    "start": "php index.php"
+    "start": "php -S 0.0.0.0:8000"
   },
   "dependencies": {
     "aos": "^2.3.4",
