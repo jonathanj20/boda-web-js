@@ -1,5 +1,5 @@
 <?php
-include 'connection_bd.php'
+include 'src/connection_bd.php'
 ?>
 
 <!DOCTYPE html>
