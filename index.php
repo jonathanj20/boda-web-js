@@ -9,11 +9,11 @@ include 'src/connection_bd.php'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/dist/styles.css">
+  <link rel="stylesheet" href="dist/styles.css">
   <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="/src/fuentes.css">
+  <link rel="stylesheet" href="src/fuentes.css">
 </head>
 
 <body>
@@ -37,7 +37,7 @@ include 'src/connection_bd.php'
           <li><a href="#contact" class="hover:text-violet-600 menu-link">Contacto</a></li>
         </ul>
       </nav>
-      <a href="#"><img src="../images/logoboda.png" alt="logo" class="hover:rotate-12 menu-link"></a>
+      <a href="#"><img src="images/logoboda.png" alt="logo" class="hover:rotate-12 menu-link"></a>
     </div>
     <nav class="bg-fuchsia-200 w-full relative top-0 left-0 h-0 shadow-[0_h-full_0_0_rgba(0,0,0,0.5)] transition-all delay-100 ease-in-out overflow-hidden" id="nav">
       <div class="hidden" id="listContainer">
@@ -99,7 +99,7 @@ include 'src/connection_bd.php'
       </div>
     </section>
     <section>
-      <audio src="../audio/si_tu_quieres.mp3" controls class="w-full bg-fuchsia-400"></audio>
+      <audio src="audio/si_tu_quieres.mp3" controls class="w-full bg-fuchsia-400"></audio>
     </section>
     <section class="p-3 w-3/4 mx-auto mt-5 border-8 border-amber-200 font-serif">
       <div>
@@ -107,7 +107,7 @@ include 'src/connection_bd.php'
         <p class="font-montserrat mx-auto w-3/4 md:w-2/4 text-justify">Damos gracias a Dios por el gran privilegio de encontrarnos. Hoy, con el profundo amor que sentimos, hemos decidido unir nuestras vidas en matrimonio.</p>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000">
-        <img src="../images/novios_prueba.png" alt="novios" class="w-60 md:w-80 mx-auto mt-5 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
+        <img src="images/novios_prueba.png" alt="novios" class="w-60 md:w-80 mx-auto mt-5 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
       </div>
       <div class="mt-5">
         <p class="uppercase text-center text-base my-4">Los novios</p>
@@ -152,7 +152,7 @@ include 'src/connection_bd.php'
       </div>
       <div class="space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:w-3/6 sm:justify-between mx-auto font-bonodi text-xl mt-14">
         <div data-aos="zoom-in-right" data-aos-duration="2000">
-          <img src="../images/vestido.png" alt="vestido para mujer" class="mx-auto" div>
+          <img src="images/vestido.png" alt="vestido para mujer" class="mx-auto" div>
           <p class="uppercase text-lg">Mujeres</p>
           <ul class="list-disc w-40 mx-auto mt-3 text-start">
             <li>
@@ -165,7 +165,7 @@ include 'src/connection_bd.php'
           </ul>
         </div>
         <div data-aos="zoom-in-left" data-aos-duration="2000">
-          <img src="../images/traje.png" alt="traje para hombre" class="mx-auto">
+          <img src="images/traje.png" alt="traje para hombre" class="mx-auto">
           <p class="uppercase text-lg">Hombres</p>
           <ul class="list-disc w-40 mx-auto mt-3">
             <li class="text-start">
@@ -190,14 +190,14 @@ include 'src/connection_bd.php'
       <div class="space-y-7 flex items-center flex-col bg-white py-10 md:space-y-0 md:grid md:place-items-center md:grid-cols-2 md:p-10 md:gap-5 lg:grid-cols-4 mt-5">
         <?php
         $srcs = array(
-          "../images/fondo_8.jpg",
-          "../images/fondo_10.png",
-          "../images/fondo_11.png",
-          "../images/fondo2.jpeg",
-          "../images/fondo4.jpeg",
-          "../images/novios_prueba.png",
-          "../images/background1.jpg",
-          "../images/background2.jpg"
+          "images/fondo_8.jpg",
+          "images/fondo_10.png",
+          "images/fondo_11.png",
+          "images/fondo2.jpeg",
+          "images/fondo4.jpeg",
+          "images/novios_prueba.png",
+          "images/background1.jpg",
+          "images/background2.jpg"
         );
 
         foreach ($srcs as $src) {
@@ -229,14 +229,14 @@ include 'src/connection_bd.php'
           <div class="swiper-wrapper">
             <?php
             $srcSlides = array(
-              "../images/fondo_8.jpg",
-              "../images/fondo_10.png",
-              "../images/fondo_11.png",
-              "../images/fondo2.jpeg",
-              "../images/fondo4.jpeg",
-              "../images/novios_prueba.png",
-              "../images/background1.jpg",
-              "../images/background2.jpg"
+              "images/fondo_8.jpg",
+              "images/fondo_10.png",
+              "images/fondo_11.png",
+              "images/fondo2.jpeg",
+              "images/fondo4.jpeg",
+              "images/novios_prueba.png",
+              "images/background1.jpg",
+              "images/background2.jpg"
             );
 
             foreach ($srcSlides as $src) {
@@ -263,10 +263,10 @@ include 'src/connection_bd.php'
             <i class="fa-solid fa-church text-xl hover:text-purple-500 cursor-pointer"></i>
             <p class="ms-3 font-serif uppercase">Ceremonia religiosa</p>
           </div>
-          <img src="../images/iglesia.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
-          <p class="font-montserrat">Igleisa Betlehem</p>
+          <img src="images/iglesia.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
+          <p class="font-montserrat">Iglesia Betlehem</p>
           <p class="font-montserrat">5:15 PM</p>
-          <img src="../images/separator2.png" alt="separador" class="mx-auto">
+          <img src="images/separator2.png" alt="separador" class="mx-auto">
           <p class="font-montserrat">16 de Sept. y Padre Kino, Guerrero, 23020, La Paz, B.C.S.</p>
           <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md font-montserrat" href="https://www.google.com/maps/dir/24.144887,-110.297585/iglesia+bethlehem+ubicacion+la+paz/@24.1467437,-110.3005277,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x86afd3ef2462056f:0x5c00fbf878a18bab!2m2!1d-110.2987049!2d24.1486938?entry=ttu" target="_blank">Ver en GPS</a>
         </div>
@@ -277,19 +277,19 @@ include 'src/connection_bd.php'
             <i class="fa-solid fa-map-pin text-xl hover:text-purple-500 cursor-pointer"></i>
             <p class="ms-3 font-serif uppercase">Recepción</p>
           </div>
-          <img src="../images/sotres2.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img font-serif">
+          <img src="images/sotres2.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img font-serif">
           <p class="font-montserrat">Salón Sotres</p>
           <p class="font-montserrat">8:30 PM</p>
-          <img src="../images/separator2.png" alt="separador" class="mx-auto">
+          <img src="images/separator2.png" alt="separador" class="mx-auto">
           <p class="font-montserrat">Pichilingue 19, Los Tabachines, 23048 La Paz, B.C.S.</p>
           <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md font-montserrat" href="https://www.google.com/maps/dir//Pichilingue+19,+Los+Tabachines,+23048+La+Paz,+B.C.S./@24.0679118,-110.3860395,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x86afcd66e6c76e9f:0x38a840618f577975!2m2!1d-110.3036379!2d24.0679339?entry=ttu" target="_blank">Ver en GPS</a>
         </div>
       </div>
     </section>
-    <section class="p-5 mt-5">
+    <section class="my-5">
       <h2 class="uppercase text-center text-xl font-montserrat">solo adultos</h2>
-      <div class="w-96 md:w-[40rem] mx-auto mt-2">
-        <p class="font-montserrat text-justify mt-2">Aunque amamos a sus pequeños, este es un evento sólo para adultos y jóvenes mayores de 15 años. Esperamos contar con su presencia y a los niños les deseamos dulces sueños en casita.</p>
+      <div class="mx-auto mt-2">
+        <p class="font-montserrat text-justify mt-2 md:w-[40rem] md:mx-auto p-3">Aunque amamos a sus pequeños, este es un evento sólo para adultos y jóvenes mayores de 15 años. Esperamos contar con su presencia y a los niños les deseamos dulces sueños en casita.</p>
       </div>
     </section>
     <section>
@@ -317,9 +317,9 @@ include 'src/connection_bd.php'
       <img class="mx-auto md:h-96 md:w-96" id="fullNormalImg" />
     </div>
 
-    <script type="module" src="/src/swiper.js"></script>
-    <script src="/src/menu.js"></script>
-    <script src="/src/photos.js"></script>
+    <script type="module" src="src/swiper.js"></script>
+    <script src="src/menu.js"></script>
+    <script src="src/photos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
