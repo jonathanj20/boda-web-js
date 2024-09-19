@@ -65,7 +65,7 @@ include 'src/connection_bd.php'
         <h2 class="uppercase -tracking-tight">invitación para</h2>
         <?php
         if (isset($_POST['btnAceptar'])) {
-          $nameGuest = $_POST['guestName'];
+          $nameGuest = trim($_POST['guestName']);
 
           /*mysqli_query ejecuta una consulta en la base de datos.
           Aquí se está ejecutando un select y si encuentra el resultado se guarda la fila en la variable
