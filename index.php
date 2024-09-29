@@ -300,7 +300,7 @@ include 'src/connection_bd.php'
       <p class="text-center uppercase font-bold">Colosenses 3:14</p>
     </section>
     <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7 mt-5 font-montserrat">
-      <p class="text-center uppercase"><i class="fa-solid fa-box fa-flip fa-2xl" style="color: #ffff00;"></i> sugerencias</p>
+      <p class="text-center uppercase"><i class="fa-solid fa-box fa-flip fa-2xl" style="color: rgb(253 230 138);"></i> sugerencias</p>
       <h2 class="text-center mt-5 text-2xl font-bold uppercase">Mesa de regalos</h2>
       <div class="space-y-5 md:space-y-0 md:flex mx-auto mt-5 md:gap-5" data-aos="fade-up" data-aos-duration="2000">
         <div class="bg-white border-8 border-amber-200 p-5 text-center space-y-3 md:w-2/6 mx-auto transition-all delay-75" data-aos="fade-up" data-aos-duration="2000">
@@ -335,6 +335,7 @@ include 'src/connection_bd.php'
       </div>
     </section>
     <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-30 mx-auto" id="containerFullImg">
+      <div class="mt-5 p-5 md:hidden md:mt-0 md:p-0"></div>
       <button class="border-2 border-black hover:border-white hover:text-white" id="btnCloseNormalImg">
         <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
