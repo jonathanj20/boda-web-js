@@ -9,7 +9,7 @@ include 'src/connection_bd.php'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/styles.css">
+  <link rel="stylesheet" href="./dist/styles.css">
   <script src="https://kit.fontawesome.com/675de417d6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -107,10 +107,10 @@ include 'src/connection_bd.php'
         <p class="font-montserrat mx-auto w-3/4 md:w-2/4 text-justify">Damos gracias a Dios por el gran privilegio de encontrarnos. Hoy, con el profundo amor que sentimos, hemos decidido unir nuestras vidas en matrimonio.</p>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000">
-        <img src="images/novios_prueba.png" alt="novios" class="w-60 md:w-80 mx-auto mt-5 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
+        <img src="images/foto_novios1.jpg" alt="novios" class="w-60 md:w-80 mx-auto mt-5 rounded-full transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
       </div>
-      <div class="mt-5">
-        <p class="uppercase text-center text-base my-4">Los novios</p>
+      <div class="mt-7">
+        <p class="uppercase text-center text-base my-5">Los novios</p>
         <p class="mt-2 text-center font-bold text-4xl md:text-6xl font-alexbrush">Mercedes & Victor</p>
       </div>
       <div class="mt-5">
@@ -139,7 +139,8 @@ include 'src/connection_bd.php'
         </div>
       </div>
     </section>
-    <section>
+    <section class="mt-5">
+      <img src="images/fotos_novios2.jpg" class="h-full w-full" alt="Mercedes y Victor">
       <p class="uppercase font-montserrat text-center mt-2 text-violet-500 font-bold">Tú cuidaras de mí, yo de tí y Dios de nosotros.</p>
     </section>
     <section class="p-7 w-10/12 bg-white mx-auto mt-5 border-8 border-amber-200 font-serif text-center" id="outfit">
@@ -187,28 +188,29 @@ include 'src/connection_bd.php'
         </svg>
         <h2 class="ms-3 font-montserrat uppercase font-bold">Galería de fotos</h2>
       </div>
-      <div class="space-y-7 flex items-center flex-col bg-white py-10 md:space-y-0 md:grid md:place-items-center md:grid-cols-2 md:p-10 md:gap-5 lg:grid-cols-4 mt-5">
+      <div class="flex items-center flex-col bg-white py-10 md:grid md:place-items-center md:grid-cols-2 md:p-10 md:gap-5 lg:grid-cols-4 mt-5">
         <?php
         $srcs = array(
-          "images/fondo_8.jpg",
-          "images/fondo_10.png",
-          "images/fondo_11.png",
-          "images/fondo2.jpeg",
-          "images/fondo4.jpeg",
-          "images/novios_prueba.png",
-          "images/background1.jpg",
-          "images/background2.jpg"
+          "images/fotos_novios3.jpg",
+          "images/fotos_novios5.jpg",
+          "images/fotos_novios6.jpg",
+          "images/fotos_novios4.jpg",
+          "images/fotos_novios7.jpg",
+          "images/fotos_novios8.jpg",
+          "images/fotos_novios9.jpg",
+          "images/fotos_novios10.jpg",
         );
 
         foreach ($srcs as $src) {
           echo "<div class='transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer'>
-                  <img src=$src class='w-9/12 md:w-72 md:h-72 border-8 border-amber-200 mx-auto img-gallery' data-aos='flip-left' data-aos-duration='2000' />
+                  <img src=$src class='w-9/12 md:w-80 md:h-80 border-8 border-amber-200 mx-auto img-gallery mb-5' data-aos='flip-left' data-aos-duration='2000' />
                 </div>";
         }
         ?>
       </div>
       <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-20 mx-auto" id="fullImageContainer">
-        <button class="border-2 border-black hover:border-white hover:text-white" id="btnCloseFullImage">
+        <div class="mt-5 p-5 md:hidden md:mt-0 md:p-0"></div>
+        <button class="border-2 border-black hover:border-white hover:text-white mb-2" id="btnCloseFullImage">
           <svg class="h-10 w-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
           </svg>
@@ -229,19 +231,19 @@ include 'src/connection_bd.php'
           <div class="swiper-wrapper">
             <?php
             $srcSlides = array(
-              "images/fondo_8.jpg",
-              "images/fondo_10.png",
-              "images/fondo_11.png",
-              "images/fondo2.jpeg",
-              "images/fondo4.jpeg",
-              "images/novios_prueba.png",
-              "images/background1.jpg",
-              "images/background2.jpg"
+              "images/fotos_novios3.jpg",
+              "images/fotos_novios5.jpg",
+              "images/fotos_novios6.jpg",
+              "images/fotos_novios4.jpg",
+              "images/fotos_novios7.jpg",
+              "images/fotos_novios8.jpg",
+              "images/fotos_novios9.jpg",
+              "images/fotos_novios10.jpg",
             );
 
             foreach ($srcSlides as $src) {
-              echo "<div class='swiper-slide'>
-                      <img src=$src class='w-9/12 h-80 md:mx-auto md:h-96 md:w-96 block mx-auto' />
+              echo "<div class='swiper-slide h-full'>
+                      <img src=$src class='w-9/12 h-full md:mx-auto md:h-full md:w-96 block mx-auto' />
                     </div>";
             }
             ?>
@@ -293,19 +295,43 @@ include 'src/connection_bd.php'
       </div>
     </section>
     <section>
-      <p class="font-montserrat uppercase text-center font-bold">El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en todas circunstancias.</p>
-      <p class="text-center uppercase font-bold">1 Corintios 13:7</p>
+      <img src="images/fotos_novios11.jpg" class="h-full w-full" alt="Mercedes y Victor">
+      <p class="font-montserrat uppercase text-center font-bold mt-5">Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto.</p>
+      <p class="text-center uppercase font-bold">Colosenses 3:14</p>
+    </section>
+    <section class="bg-[url('../images/background1.jpg')] bg-cover bg-no-repeat p-7 mt-5 font-montserrat">
+      <p class="text-center uppercase"><i class="fa-solid fa-box fa-flip fa-2xl" style="color: #ffff00;"></i> sugerencias</p>
+      <h2 class="text-center mt-5 text-2xl font-bold uppercase">Mesa de regalos</h2>
+      <div class="space-y-5 md:space-y-0 md:flex mx-auto mt-5 md:gap-5" data-aos="fade-up" data-aos-duration="2000">
+        <div class="bg-white border-8 border-amber-200 p-5 text-center space-y-3 md:w-2/6 mx-auto transition-all delay-75" data-aos="fade-up" data-aos-duration="2000">
+          <i class="fa-regular fa-envelope fa-2xl" style="color: #ff00ff;"></i>
+          <p>Lluvia de sobres</p>
+          <p>La lluvia de sobres es la tradición de regalar dinero en efectivo en un sobre a los novio el día del evento.</p>
+        </div>
+        <div class="bg-white border-8 border-amber-200 p-5 text-center space-y-3 md:w-2/6 mx-auto" data-aos="fade-up" data-aos-duration="2000">
+          <i class="fa-solid fa-gift fa-2xl" style="color: #ff00ff;"></i>
+          <p>Sears</p>
+          <p class="uppercase">Código - 162778</p>
+          <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md font-montserrat cursor-pointer" href="https://www.sears.com.mx/Mesa-de-Regalos/162778/te-invito-a-mi-boda-mercedes-victor-hugo" target="_blank">Ver regalos</a>
+        </div>
+        <div class="bg-white border-8 border-amber-200 p-5 text-center space-y-3 md:w-2/6 mx-auto transition-all delay-75" data-aos="fade-up" data-aos-duration="2000">
+          <i class="fa-solid fa-gift fa-2xl" style="color: #ff00ff;"></i>
+          <p>Liverpool</p>
+          <p class="uppercase">Código - 51526778</p>
+          <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md font-montserrat cursor-pointer" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51526778" target="_blank">Ver regalos</a>
+        </div>
+      </div>
     </section>
     <section class="p-5 text-center mt-5" id="contact">
-      <div class="flex justify-center">
-        <i class="fa-regular fa-calendar-check text-2xl hover:text-purple-500 cursor-pointer"></i>
-        <h2 class="ms-3 font-montserrat uppercase font-bold">Confirmación de asistencia</h2>
+      <div classs="flex justify-center">
+        <h2 class="ms-3 font-montserrat uppercase font-bold"><i class="fa-regular fa-calendar-check text-2xl hover:text-purple-500 cursor-pointer"></i> Confirmación de asistencia</h2>
       </div>
       <div class="border-4 border-purple-600 p-7 my-5 space-y-5 md:w-2/5 mx-auto" data-aos="flip-up" data-aos-duration="2000">
         <i class="fa-brands fa-whatsapp fa-bounce fa-5x mt-5" style="color: #8d11ca;"></i>
         <p class="font-montserrat">Confirmar por WhatsApp</p>
         <a href="https://wa.me/526121408800" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 font-montserrat">Con Mercedes</a>
         <a href="https://wa.me/5216121316339" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 font-montserrat">Con Victor</a>
+        <p class="font-montserrat text-red-500">Confirmar a más tardar el día 4 de octubre del 2024</p>
       </div>
     </section>
     <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-30 mx-auto" id="containerFullImg">
@@ -314,9 +340,8 @@ include 'src/connection_bd.php'
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
         </svg>
       </button>
-      <img class="mx-auto md:h-96 md:w-96" id="fullNormalImg" />
+      <img class="mx-auto md:h-full md:w-96" id="fullNormalImg" />
     </div>
-
     <script type="module" src="src/swiper.js"></script>
     <script src="src/menu.js"></script>
     <script src="src/photos.js"></script>
