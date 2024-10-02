@@ -267,7 +267,7 @@ include 'src/connection_bd.php'
           </div>
           <img src="images/iglesia.jpg" alt="Iglesia" class="mb-5 mx-auto md:w-72 md:h-72 transition-all ease-in-out delay-75 hover:scale-110 cursor-pointer img">
           <p class="font-montserrat">Iglesia Betlehem</p>
-          <p class="font-montserrat">5:15 PM</p>
+          <p class="font-montserrat">5:00 PM</p>
           <img src="images/separator2.png" alt="separador" class="mx-auto">
           <p class="font-montserrat">16 de Sept. y Padre Kino, Guerrero, 23020, La Paz, B.C.S.</p>
           <a class="block border-2 border-purple-500 bg-purple-400 p-3 mt-3 text-white hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 rounded-md font-montserrat" href="https://www.google.com/maps/dir/24.144887,-110.297585/iglesia+bethlehem+ubicacion+la+paz/@24.1467437,-110.3005277,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x86afd3ef2462056f:0x5c00fbf878a18bab!2m2!1d-110.2987049!2d24.1486938?entry=ttu" target="_blank">Ver en GPS</a>
