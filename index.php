@@ -140,7 +140,7 @@ include 'src/connection_bd.php'
       </div>
     </section>
     <section class="mt-5">
-      <img src="images/fotos_novios2.jpg" class="h-full w-full" alt="Mercedes y Victor">
+      <img src="images/fotos_novios2.jpg" class="h-full w-full cursor-pointer img" alt="Mercedes y Victor">
       <p class="uppercase font-montserrat text-center mt-2 text-violet-500 font-bold">Tú cuidaras de mí, yo de tí y Dios de nosotros.</p>
     </section>
     <section class="p-7 w-10/12 bg-white mx-auto mt-5 border-8 border-amber-200 font-serif text-center" id="outfit">
@@ -291,11 +291,11 @@ include 'src/connection_bd.php'
     <section class="my-5">
       <h2 class="uppercase text-center text-xl font-montserrat">solo adultos</h2>
       <div class="mx-auto mt-2">
-        <p class="font-montserrat text-justify mt-2 md:w-[40rem] md:mx-auto p-3">Aunque amamos a sus pequeños, este es un evento sólo para adultos y jóvenes mayores de 15 años. Esperamos contar con su presencia y a los niños les deseamos dulces sueños en casita.</p>
+        <p class="font-montserrat text-justify mt-2 md:w-[40rem] md:mx-auto p-3">Aunque amamos a sus pequeños, este es un evento sólo para adultos y adolescentes mayores de 12 años. Esperamos contar con su presencia y a los niños les deseamos dulces sueños en casita.</p>
       </div>
     </section>
     <section>
-      <img src="images/fotos_novios11.jpg" class="h-full w-full" alt="Mercedes y Victor">
+      <img src="images/fotos_novios11.jpg" class="h-full w-full cursor-pointer img" alt="Mercedes y Victor">
       <p class="font-montserrat uppercase text-center font-bold mt-5">Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto.</p>
       <p class="text-center uppercase font-bold">Colosenses 3:14</p>
     </section>
@@ -331,7 +331,7 @@ include 'src/connection_bd.php'
         <p class="font-montserrat">Confirmar por WhatsApp</p>
         <a href="https://wa.me/526121408800" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 font-montserrat">Con Mercedes</a>
         <a href="https://wa.me/5216121316339" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 font-montserrat">Con Victor</a>
-        <p class="font-montserrat text-red-500">Confirmar a más tardar el día 4 de octubre del 2024</p>
+        <p class="font-montserrat text-red-500">Confirmar a más tardar el día 5 de octubre del 2024</p>
       </div>
     </section>
     <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-30 mx-auto" id="containerFullImg">
