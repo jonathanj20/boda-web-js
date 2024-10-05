@@ -306,7 +306,7 @@ include 'src/connection_bd.php'
         <div class="bg-white border-8 border-amber-200 p-5 text-center space-y-3 md:w-2/6 mx-auto transition-all delay-75" data-aos="fade-up" data-aos-duration="2000">
           <i class="fa-regular fa-envelope fa-2xl" style="color: #ff00ff;"></i>
           <p>Lluvia de sobres</p>
-          <p>La lluvia de sobres es la tradición de regalar dinero en efectivo en un sobre a los novio el día del evento.</p>
+          <p>La lluvia de sobres es la tradición de regalar dinero en efectivo en un sobre a los novios el día del evento.</p>
         </div>
         <div class="bg-white border-8 border-amber-200 p-5 text-center space-y-3 md:w-2/6 mx-auto" data-aos="fade-up" data-aos-duration="2000">
           <i class="fa-solid fa-gift fa-2xl" style="color: #ff00ff;"></i>
