@@ -331,7 +331,6 @@ include 'src/connection_bd.php'
         <p class="font-montserrat">Confirmar por WhatsApp</p>
         <a href="https://wa.me/526121408800" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 font-montserrat">Con Mercedes</a>
         <a href="https://wa.me/5216121316339" target="_blank" class="block text-white text-lg bg-purple-400 border-2 border-purple-500 p-2 rounded-md hover:bg-white hover:text-purple-500 transition-all ease-in-out delay-75 font-montserrat">Con Victor</a>
-        <p class="font-montserrat text-red-500">Confirmar a más tardar el día 11 de octubre del 2024</p>
       </div>
     </section>
     <div class="hidden bg-black bg-opacity-30 p-5 fixed left-0 right-0 bottom-0 top-0 z-30 mx-auto" id="containerFullImg">
